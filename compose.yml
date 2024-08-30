@@ -1,0 +1,18 @@
+services:
+  # ADDRESS: 
+  ev_1:
+    container_name: ${CONTAINER_NAME}
+    image: elixirprotocol/validator:v3
+    labels:
+      - "alias=${LABEL_ALIAS}"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+    ports:
+      - "17690:17690"
+    env_file:
+      - ./elixir/.env
+
