@@ -3,6 +3,7 @@ services:
   ev_1:
     container_name: ${CONTAINER_NAME}
     image: elixirprotocol/validator:v3
+    platform: linux/amd64
     # environment:
     #   - "LOGGING_LEVEL=debug"
     labels:
