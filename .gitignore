@@ -1,3 +1,4 @@
 .env
 elixir_metrics.prom
 .src
+memo.md

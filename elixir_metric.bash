@@ -22,13 +22,13 @@ data_frames_consumed=$(echo $response | jq -r '.data_frames_consumed')
 proposals_produced=$(echo $response | jq -r '.proposals_produced')
 
 # Prometheusフォーマットでファイルに書き出し
-echo "# HELP data_frames_consumed The number of data frames consumed." > $OUTPUT_FILE
-echo "# TYPE data_frames_consumed gauge" >> $OUTPUT_FILE
-echo "data_frames_consumed $data_frames_consumed" >> $OUTPUT_FILE
+# echo "# HELP data_frames_consumed The number of data frames consumed." > $OUTPUT_FILE
+# echo "# TYPE data_frames_consumed gauge" >> $OUTPUT_FILE
+# echo "data_frames_consumed $data_frames_consumed" >> $OUTPUT_FILE
 
-echo "# HELP proposals_produced The number of proposals produced." >> $OUTPUT_FILE
-echo "# TYPE proposals_produced gauge" >> $OUTPUT_FILE
-echo "proposals_produced $proposals_produced" >> $OUTPUT_FILE
+# echo "# HELP proposals_produced The number of proposals produced." >> $OUTPUT_FILE
+# echo "# TYPE proposals_produced gauge" >> $OUTPUT_FILE
+# echo "proposals_produced $proposals_produced" >> $OUTPUT_FILE
 
 # 必要に応じて追加のフィールドを記録する
 echo "# HELP app_version The version of the application." >> $OUTPUT_FILE

@@ -17,4 +17,10 @@ services:
       - "17690:17690"
     env_file:
       - ./elixir/.env
+    networks:
+      - monitoring
 
+
+networks:
+  monitoring:
+    external: true
