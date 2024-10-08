@@ -3,7 +3,7 @@
 SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 # APIエンドポイントのURLを定義
-API_URL="http://localhost:17690/metrics"
+API_URL="http://localhost:17690/health"
 
 # 出力するpromファイルのパス
 OUTPUT_FILE="${SCRIPT_DIR}/elixir_metrics.prom"
