@@ -2,7 +2,7 @@ services:
   # ADDRESS: 
   ev_1:
     container_name: ${CONTAINER_NAME}
-    image: elixirprotocol/validator:testnet-3
+    image: elixirprotocol/validator:testnet
     platform: linux/amd64
     # environment:
     #   - "LOGGING_LEVEL=debug"
