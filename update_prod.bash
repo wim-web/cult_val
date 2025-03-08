@@ -1,7 +1,7 @@
 #!/bin/bash
 
-docker compose -f compose.prod.yml down
+docker compose down
 
 docker pull elixirprotocol/validator --platform linux/amd64
 
-docker compose -f compose.prod.yml up -d
+docker compose up -d

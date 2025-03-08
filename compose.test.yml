@@ -1,13 +1,12 @@
 services:
-  # ADDRESS: 
-  elixir_validator:
-    container_name: ${CONTAINER_PROD_NAME}
-    image: elixirprotocol/validator
+  elixir_validator_test:
+    container_name: ${CONTAINER_TEST_NAME}
+    image: elixirprotocol/validator:testnet
     platform: linux/amd64
     # environment:
     #   - "LOGGING_LEVEL=debug"
     labels:
-      - "alias=${LABEL_PROD_ALIAS}"
+      - "alias=${LABEL_TEST_ALIAS}"
     logging:
       driver: json-file
       options:
@@ -15,9 +14,9 @@ services:
         max-file: "3"
     restart: unless-stopped
     ports:
-      - "17691:17690"
+      - "17690:17690"
     env_file:
-      - ./elixir/prod.env
+      - ./elixir/test.env
     networks:
       - monitoring
 

@@ -1,8 +1,7 @@
 services:
-  # ADDRESS: 
-  ev_1:
+  elixir_validator:
     container_name: ${CONTAINER_NAME}
-    image: elixirprotocol/validator:testnet
+    image: elixirprotocol/validator
     platform: linux/amd64
     # environment:
     #   - "LOGGING_LEVEL=debug"
@@ -15,7 +14,7 @@ services:
         max-file: "3"
     restart: unless-stopped
     ports:
-      - "17690:17690"
+      - "17691:17690"
     env_file:
       - ./elixir/.env
     networks:
