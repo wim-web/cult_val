@@ -1,7 +1,0 @@
-[Unit]
-Description=elixir metrics
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/systemd/system/elixir_metric.ini
-ExecStart=su "${User}" -c "export PATH=${PATH}; cd ${WorkingDirectory} && ./elixir_metric.bash"
